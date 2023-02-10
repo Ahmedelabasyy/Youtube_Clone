@@ -7,7 +7,7 @@ function App() {
   const {sideBar} = useSelector(state => state.theme);
   return (
     <div className="App">
-      <Router>
+      <Router basename={window.location.pathname || ''}>
       <Navbar />
         {sideBar ? <SideMenu /> : null}
         <Sidebar />
