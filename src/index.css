@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.after_label {
+    @apply relative after:absolute after:top-[50px] after:left-[-20px] after:z-[99] after:bg-darkerGray after:text-[12px] after:rounded-md after:font-roboto after:text-white after:py-2 after:px-3 after:hidden hover:after:block ;
+}
+
+* {
+    transition: all .01s ease-in-out;
+
+}
+
+.icon_hover {
+    @apply hover:bg-darkGray transition duration-300 ease-in-out;
+}
+
+.dark_icon_hover {
+    @apply dark:hover:bg-[#303030]
+}
+
+.column_view {
+    @apply flex flex-col items-center justify-center;
+}
+
+.row_view {
+    @apply flex flex-row items-center justify-start
+}
+
+.flex_col_view {
+    @apply flex flex-col items-start;
+}
+
+.flex_row_view {
+    @apply flex flex-row items-center;
+}
+.sideIcon_hover {
+    @apply hover:bg-[#F2F2F2];
+}
+
+.section_margin {
+    @apply md:ml-[72px]
+}
+
+.section_padding {
+    @apply px-6;
+}
+
+.active {
+    @apply bg-[#f2f2f2] hover:bg-[#E5E5E5] dark:bg-[#303030] dark:hover:bg-[#3e3e3e]
+}
+
+.smooth_transition {
+    transition: all .2s ease-in-out;
+}
+
+.slick-slide {
+    width: fit-content !important;
+}
+
+.slick-arrow {
+    position: absolute;
+    width: 60px;
+    height: 40px;
+    z-index: 3;
+}
+
+.slick-disabled {
+    display: none !important;
+}
+
+.slick-arrow::before {
+    @apply dark:text-myGray;
+    color: black;
+}
+
+.slick-prev {
+    @apply dark:bg-gradient-to-r from-black to-transparent;
+    background-image: linear-gradient(to right, white,white, #ffffff42);
+    left: 0;
+}
+.slick-next {
+    @apply dark:bg-gradient-to-l from-black to-transparent;
+    background-image: linear-gradient(to left, white,white, #ffffff42);
+    right: 0;
+}
+
+
+.react-player {
+    height: 72vh !important;
+    width: 100% !important;
+}
+
+.dark_button {
+    @apply dark:bg-[#333] dark:hover:bg-[#3e3e3e] dark:text-white dark:border-[#444];
+}
+
+.dark_text {
+    @apply dark:text-[#f1f1f1]
+}
