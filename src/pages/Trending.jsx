@@ -1,4 +1,4 @@
-import React from 'react';
+import trending from '../assets/trending_avatar.png';
 import { useGetTrendingVideosQuery } from '../features/slices/youtubeV3Slice';
 import { Error, Loader } from '../components';
 import {Videorow} from '../components';
@@ -16,7 +16,7 @@ const Trending = () => {
         <div className='text-black section_margin dark:bg-mainBlack h-full smooth_transition'>
             <div className='md:px-[80px] sm:px-[60px] px-[30px] py-5'>
                 <div className='row_view mb-4'>
-                    <img src="/trending_avatar.png" alt="avatar" className='mr-5 w-[80px] h-[80px]'/>
+                    <img src={trending} alt="avatar" className='mr-5 w-[80px] h-[80px]'/>
                     <h2 className='font-roboto text-[24px] dark:text-white'>Trending</h2>
                 </div>
 

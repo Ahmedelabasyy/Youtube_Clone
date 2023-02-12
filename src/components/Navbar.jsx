@@ -1,7 +1,8 @@
 import React, { useRef, useState } from 'react'
-
+import logo from '../assets/you.png';
+import user from '../assets/me.jpg';
 import {IoIosMenu, IoIosSearch, IoIosNotificationsOutline} from 'react-icons/io';
-import {BsYoutube, BsMicFill, BsMoonStars} from 'react-icons/bs';
+import {BsMicFill, BsMoonStars} from 'react-icons/bs';
 import {MdOutlineLightMode} from 'react-icons/md';
 import {IoVideocamOutline} from 'react-icons/io5';
 import { useDarkMode } from '../hook/useDarkMode';
@@ -37,7 +38,7 @@ const Navbar = () => {
                 <IoIosMenu onClick={() => handleSideBar()} className='text-[26px] dark:text-white'/>
                 </div>
                 <Link to="/" className='flex items-center'>
-                    <img className='w-[31px] h-[21px] mr-1' src="/src/assets/you.png" alt="logo" />
+                    <img className='w-[31px] h-[21px] mr-1' src={logo} alt="logo" />
                     <h2 className='font-roboto font-bold text-xl tracking-[-1.1px] dark:text-white'>YouTube<sup className='font-normal top-[-13px] mb-4 text-gray-500 text-[10px] dark:text-gray-400'>EG</sup></h2>
                 </Link>
             </div>
@@ -63,7 +64,7 @@ const Navbar = () => {
                 
                 <li className='after_label after:content-["Create"] rounded-full p-2 icon_hover dark_icon_hover'><IoVideocamOutline className='sm:text-2xl cursor-pointer dark:text-[#CACACA] '/></li>
                 <li className='after_label after:content-["Notification"] rounded-full p-2 icon_hover dark_icon_hover'><IoIosNotificationsOutline className='sm:text-2xl cursor-pointer dark:text-[#CACACA]'/></li>
-                <li><img src="/me.jpg" alt="user" className='rounded-full w-[32px] ml-2 h-[32px] cursor-pointer object-cover object-top'/></li>
+                <li><img src={user} alt="user" className='rounded-full w-[32px] ml-2 h-[32px] cursor-pointer object-cover object-top'/></li>
             </ul>
         </nav>
     )
